@@ -1,0 +1,1 @@
+PS C:\WINDOWS\system32> bcdedit /set '{bootmgr}' path \EFI\BOOT\bootx64.efi                                             The operation completed successfully. 
