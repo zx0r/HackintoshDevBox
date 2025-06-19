@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "*----------------------*"
+echo "   Welcome `users`      "
+echo "*----------------------*"
+echo "                "
+echo "                "
+./getcodecid
+echo "                "
+echo "                "
+echo "Visit Olarila.com"

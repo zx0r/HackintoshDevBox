@@ -1,0 +1,287 @@
+#!/bin/bash
+
+echo "||||||||||||||||||||||||"
+echo "*----------------------*"
+echo "  Welcome `users`       "
+echo "*----------------------*"
+echo "||||||||||||||||||||||||"
+echo "*----------------------*"
+echo "-----Send Me Files------"
+echo "*----------------------*"
+echo "||||||||||||||||||||||||"
+echo "**********************************************************************************"
+echo "Run .app and wait! Please don't touch your computer until the program is finished."
+echo "**********************************************************************************"
+echo "****************************************************************************************************"
+echo "Small donations via PayPal for build, patches and guides development would be extremely appreciated."
+echo "****************************************************************************************************"
+
+echo "Piping..."
+pip3 install packaging
+pip3 install --upgrade pip
+
+echo "Starting..."
+outDir=/tmp/send_me
+hostName=$(hostname | sed 's/.local//g')
+efiScript=./mount_efi.sh
+pledit=./PlistBuddy
+donate=./donate.command
+getcodecid=./getcodecid
+sysPfl=/usr/sbin/system_profiler
+maskedVal="XX-MASKED-XX"
+ListCodec=$(ioreg -rxn IOHDACodecDevice | grep VendorID | awk '{ print $4 }' | sed 's/ffffffff//')
+Ptccutil=$(osascript -e "do shell script \"./tccutil.py -i org.olarila.com.RunMe\" with administrator privileges") 
+
+rm -rf $outDir
+mkdir $outDir
+
+IODelayAfterQuit=1 # Delay after quitting IOReg
+IODelayAfterActi=4 # Delay after passing activate command
+IODelayForOneSec=1 # General delay for one second
+IODelayForThreeS=3 # Delay for three seconds
+
+function IOIncrement(){
+	IODelayAfterQuit=$(($IODelayAfterQuit + 6))
+	IODelayAfterActi=$(($IODelayAfterActi + 5))
+	IODelayForOneSec=$(($IODelayForOneSec + 4))
+	IODelayForThreeS=$(($IODelayForThreeS + 3))
+}
+
+timesIncremented=1
+function checkIOREG(){
+	if [[ ! -e "$outDir/$hostName.ioreg" ]]; then
+		echo "IOREG dump failed. Retrying by increasing delays..." && sleep 0.5
+
+		# Increment Delays
+		IOIncrement
+
+		# Tell user that values have been increased
+		timesIncremented=$(($timesIncremented + 1))
+		if [[ $timesIncremented -gt 1 ]]; then
+			echo "IOREG dump has failed 1 times. Dumping generic IOREG report instead."
+			ioreg -f -l &>"$outDir/generic_ioreg.txt"
+		else
+			echo -e "Increased delay by x$timesIncremented times. Retrying..."
+
+			# Dump again
+			dumpIOREG
+		fi
+	else
+		echo "IOREG Verified as $outDir/$hostName.ioreg"
+	fi
+}
+
+function dumpIOREG(){
+	# Credits black-dragon74
+	osascript >/dev/null 2>&1 <<-EOF
+		quit application "IORegistryExplorer"
+		delay "$IODelayAfterQuit"
+
+		activate application "Applications:IORegistryExplorer.app"
+		delay "$IODelayAfterActi"
+		tell application "System Events"
+			tell process "IORegistryExplorer"
+				keystroke "s" using {command down}
+				delay "$IODelayForOneSec"
+				keystroke "g" using {command down, shift down}
+				delay "$IODelayForOneSec"
+				keystroke "$outDir"
+				delay "$IODelayForOneSec"
+				key code 36
+				delay "$IODelayForThreeS"
+				keystroke "$hostName"
+				delay "$IODelayForOneSec"
+				key code 36
+				delay "$IODelayForThreeS"
+				keystroke "s" using {command down}
+				delay "$IODelayForThreeS"
+			end tell
+		end tell
+
+		quit application "IORegistryExplorer"
+	EOF
+
+	# Check for successful dump
+	checkIOREG
+}
+
+function dumpIOREG(){
+	# Credits black-dragon74
+	osascript >/dev/null 2>&1 <<-EOF
+		quit application "IORegistryExplorer"
+		delay 1
+
+		activate application "./IORegistryExplorer.app"
+		delay 4
+		tell application "System Events"
+			tell process "IORegistryExplorer"
+				keystroke "s" using {command down}
+				delay 1
+				keystroke "g" using {command down, shift down}
+				delay 0.5
+				keystroke "$outDir"
+				delay 1
+				key code 36
+				delay 2
+				keystroke "$hostName"
+				delay 1
+				key code 36
+				delay 3
+				keystroke "s" using {command down}
+				delay 3
+			end tell
+		end tell
+
+		quit application "IORegistryExplorer.app"
+	EOF
+
+	# Check for successful dump
+	checkIOREG
+}
+
+function dumpKernelLog(){
+	bt=$(sysctl -n kern.boottime | sed 's/^.*} //')
+
+	bTm=$(echo "$bt" | awk '{print $2}')
+	bTd=$(echo "$bt" | awk '{print $3}')
+	bTt=$(echo "$bt" | awk '{print $4}')
+	bTy=$(echo "$bt" | awk '{print $5}')
+
+	bTm=$(awk -v "month=$bTm" 'BEGIN {months = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec"; print (index(months, month) + 3) / 4}')
+	bTm=$(printf %02d $bTm)
+
+	ep=$(/bin/date -jf '%H:%M:%S' $bTt '+%s')
+
+	cs=$((ep - 60 ))
+
+	bTt=$(/bin/date -r $cs '+%H:%M:%S')
+
+	stopTime=$(log show --debug --info --start "$bTy-$bTm-$bTd $bTt" | grep loginwindow | head -1)
+	stopTime="${stopTime%      *}"
+
+	echo "Extract boot log from $bTy-$bTm-$bTd $bTt"
+
+	log show --debug --info --start "$bTy-$bTm-$bTd $bTt" | grep -E 'kernel:|loginwindow:' | sed -n -e "/kernel: PMAP: PCID enabled/,/$stopTime/ p"
+}
+
+# Add function to dump system information, requested by Jake
+# Make it optional though as a full system report might take 3+ minutes on slow machines
+# If user includes a -sysprofile arg then only generate a system report
+function genSystemRep(){
+	# Generate report in .spx format so that it is easier to debug.
+	# If user wishes so, he can generate a report in txt format.
+	# To generate a report in .txt format you can use gen_debug -sysprofile txt
+	if [[ ! -z $1 ]]; then
+		# Check arg
+		if [[ "$1" == "txt" ]]; then
+			# Generate report in .txt format
+			echo "Generating report in txt format as requested."
+			$sysPfl > $outDir/SysDump-$hostName.txt 2>/dev/null
+		else
+			echo -e "Ignored invalid arg: $1\nGenerating report in spx format."
+			# Generate report in spx format
+			$sysPfl -xml > $outDir/SysDump-$hostName.spx 2>/dev/null
+		fi
+	else
+		# Generate report in spx format
+		$sysPfl -xml > $outDir/SysDump-$hostName.spx 2>/dev/null
+	fi
+}
+
+echo "Pmset Log..."
+pmset -g > $outDir/Pmset.txt
+
+echo "ACPI tables..."
+mkdir $outDir/ACPI
+./patchmatic -extract $outDir/ACPI
+
+echo "VDADecoder Checker..."
+./VDADecoderChecker > $outDir/VDADecoderChecker.txt
+
+echo "Bootargs Log..."
+sysctl -n kern.bootargs > $outDir/Bootargs.txt
+
+echo "Kernel Version..."
+sysctl -n kern.version | cut -d ";" -f1 > $outDir/KernelVersion.txt
+
+echo "Audio Codecs..."
+./ListCodec.command > $outDir/AudioCodecs.txt 2>/dev/null
+./getcodecid >> $outDir/AudioCodecs.txt 2>/dev/null
+
+echo "System Version..."
+sw_vers > $outDir/SystemVersion.txt
+
+echo "Cpu Log..."
+sysctl -a | grep "machdep.cpu.brand_string" > $outDir/Cpu.txt
+
+echo "Extracting bootlog..."
+log show --last boot | head -1500 > $outDir/bootlog.txt
+
+echo "Clover files (need administrator privileges)"
+efiloc=$(osascript -e "do shell script \"$efiScript $*\" with administrator privileges")
+echo "Mounted EFI at $efiloc"
+cp -prf "$efiloc/EFI/CLOVER" $outDir
+echo "Removing theme dir."
+rm -rf $outDir/CLOVER/them* &>/dev/null
+echo "Removing tools dir."
+rm -rf $outDir/CLOVER/too* &>/dev/null
+echo "Masking your System IDs"
+$pledit -c "Set SMBIOS:SerialNumber $maskedVal" $outDir/CLOVER/config.plist &>/dev/null
+$pledit -c "Set SMBIOS:BoardSerialNumber $maskedVal" $outDir/CLOVER/config.plist &>/dev/null
+$pledit -c "Set SMBIOS:SmUUID $maskedVal" $outDir/CLOVER/config.plist &>/dev/null
+$pledit -c "Set RtVariables:ROM $maskedVal" $outDir/CLOVER/config.plist &>/dev/null
+$pledit -c "Set RtVariables:MLB $maskedVal" $outDir/CLOVER/config.plist &>/dev/null
+echo "Dumped CLOVER files."
+cp -prf "$efiloc/EFI/OC" $outDir
+echo "Removing Resources dir."
+rm -rf $outDir/OC/Reso* &>/dev/null
+echo "Removing Tools dir."
+rm -rf $outDir/OC/Tool* &>/dev/null
+echo "Masking your System IDs"
+$pledit -c "Set PlatformInfo:Generic:MLB $maskedVal" $outDir/OC/config.plist &>/dev/null
+$pledit -c "Delete PlatformInfo:Generic:ROM" $outDir/OC/config.plist &>/dev/null
+$pledit -c "Add PlatformInfo:Generic:ROM string $maskedVal" $outDir/OC/config.plist &>/dev/null
+$pledit -c "Set PlatformInfo:Generic:SystemSerialNumber $maskedVal" $outDir/OC/config.plist &>/dev/null
+$pledit -c "Set PlatformInfo:Generic:SystemUUID $maskedVal" $outDir/OC/config.plist &>/dev/null
+$pledit -c "Set PlatformInfo:DataHub:SystemSerialNumber $maskedVal" $outDir/OC/config.plist &>/dev/null
+$pledit -c "Set PlatformInfo:DataHub:SystemUUID $maskedVal" $outDir/OC/config.plist &>/dev/null
+$pledit -c "Set PlatformInfo:PlatformNVRAM:MLB $maskedVal" $outDir/OC/config.plist &>/dev/null
+$pledit -c "Set PlatformInfo:PlatformNVRAM:ROM $maskedVal" $outDir/OC/config.plist &>/dev/null
+echo "Dumped OC files."
+diskutil unmount $efiloc &>/dev/null
+echo "Unmounted $efiloc"
+
+echo "Generating system info, this may take a while."
+genSystemRep
+
+echo "Saving IOReg..."
+pip3 install packaging &>/dev/null
+#tccutil=$(osascript -e "do shell script \"$Ptccutil\" with administrator privileges")
+$Ptccutil
+dumpIOREG
+killall IORegistryExplorer
+
+echo "Donate / Beer Paypal Link"
+./donate.command
+
+echo "Creating Zip..."
+cd $outDir
+zip -r ~/Desktop/"Send me $hostName.zip" * > /dev/null
+rm -rf $outDir
+
+echo "Done."
+echo ""
+echo "******PLEASE UPLOAD THE \"SEND ME\" FILE CREATED IN YOUR DESKTOP******"
+echo "---------------------------------------------------------------------"
+echo "---------------------------------------------------------------------"
+echo "---------------------------------------------------------------------"
+echo "Scripts Credits:"
+echo "-black.dragon74 (Ioreg and some dumps)"
+echo "-RehabMan (Mount EFI and patchmatic)"
+echo "-Mirone, cecekpawon (Audio Codecs and some improvements)"
+echo "-Jacob Salmela (tccutil)"
+echo "-Andy.V (getcodecid)"
+echo "-Oldnapalm (Big Thanks)"
+echo "-MaLd0n (All others dumps)"
+echo "------------------------------"
+echo "© MaLd0n / Olarila.com"

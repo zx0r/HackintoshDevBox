@@ -1,0 +1,18 @@
+#!/bin/sh
+
+echo '              '
+echo "Hello `users`!"
+echo '              '
+echo '--System Version--'
+sw_vers
+echo '              '
+echo '              '
+echo '--Processor--'
+sysctl -a | grep "machdep.cpu.brand_string"
+echo '              '
+echo '              '
+echo '--VDA Decoder Checker--'
+./VDADecoderChecker
+echo '              '
+echo '              '
+echo 'Credits: breuhan and Acidanthera'

@@ -1,0 +1,561 @@
+[
+    {
+        "class": 48,
+        "identifiers": {
+            "acpi_path": "\\_SB.PCI0.GP19.XHC2",
+            "bdf": [
+                24,
+                0,
+                0
+            ],
+            "location_id": 0,
+            "path": "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/GP19@8,3/IOPP/XHC2@0/XHC2@00000000",
+            "pci_id": [
+                "1022",
+                "15b8",
+                "1458",
+                "5007"
+            ],
+            "pci_revision": 0
+        },
+        "name": "XHC2",
+        "ports": [
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [
+                    {
+                        "devices": [
+                            {
+                                "devices": [],
+                                "location_id": 1179648,
+                                "name": "2.4G Wireless Receiver",
+                                "port": 2,
+                                "speed": 1
+                            },
+                            {
+                                "devices": [
+                                    {
+                                        "devices": [],
+                                        "location_id": 1323008,
+                                        "name": "Gaming Keyboard",
+                                        "port": 3,
+                                        "speed": 1
+                                    }
+                                ],
+                                "location_id": 1310720,
+                                "name": "USB 2.0 Hub",
+                                "port": 4,
+                                "speed": 2
+                            }
+                        ],
+                        "location_id": 1048576,
+                        "name": "USB2.0 Hub",
+                        "port": 1,
+                        "speed": 2
+                    }
+                ],
+                "guessed": 3,
+                "index": 1,
+                "location_id": 1048576,
+                "name": "HS01",
+                "selected": true,
+                "selection_index": 1,
+                "type": null
+            }
+        ],
+        "selected_count": 1
+    },
+    {
+        "class": 48,
+        "identifiers": {
+            "acpi_path": "\\_SB.PCI0.GP17.XHC0",
+            "bdf": [
+                23,
+                0,
+                3
+            ],
+            "location_id": 1610612736,
+            "path": "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/GP17@8,1/IOPP/XHC0@0,3/XHC0@60000000",
+            "pci_id": [
+                "1022",
+                "15b6",
+                "1458",
+                "5007"
+            ],
+            "pci_revision": 0
+        },
+        "name": "XHC0",
+        "ports": [
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [],
+                "guessed": 3,
+                "index": 1,
+                "location_id": 1611661312,
+                "name": "HS01",
+                "selected": false,
+                "selection_index": 2,
+                "type": null
+            }
+        ],
+        "selected_count": 0
+    },
+    {
+        "class": 48,
+        "identifiers": {
+            "acpi_path": "\\_SB.PCI0.GP17.XHC1",
+            "bdf": [
+                23,
+                0,
+                4
+            ],
+            "location_id": -2147483648,
+            "path": "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/GP17@8,1/IOPP/XHC1@0,4/XHC1@80000000",
+            "pci_id": [
+                "1022",
+                "15b7",
+                "1458",
+                "5007"
+            ],
+            "pci_revision": 0
+        },
+        "name": "XHC1",
+        "ports": [
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [],
+                "guessed": 3,
+                "index": 1,
+                "location_id": -2146435072,
+                "name": "HS01",
+                "selected": false,
+                "selection_index": 3,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [],
+                "guessed": 3,
+                "index": 2,
+                "location_id": -2145386496,
+                "name": "HS02",
+                "selected": false,
+                "selection_index": 4,
+                "type": null
+            },
+            {
+                "class": 3,
+                "comment": null,
+                "devices": [],
+                "guessed": 3,
+                "index": 3,
+                "location_id": -2144337920,
+                "name": "SS01",
+                "selected": false,
+                "selection_index": 5,
+                "type": null
+            },
+            {
+                "class": 3,
+                "comment": null,
+                "devices": [],
+                "guessed": 3,
+                "index": 4,
+                "location_id": -2143289344,
+                "name": "SS02",
+                "selected": false,
+                "selection_index": 6,
+                "type": null
+            }
+        ],
+        "selected_count": 0
+    },
+    {
+        "class": 48,
+        "identifiers": {
+            "acpi_path": "\\_SB.PCI0.GPP7.UP00.DP60.XH00",
+            "bdf": [
+                20,
+                0,
+                0
+            ],
+            "location_id": 16777216,
+            "path": "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/GPP7@2,1/IOPP/UP00@0/IOPP/DP60@C/IOPP/XH00@0/XH00@01000000",
+            "pci_id": [
+                "1022",
+                "43f7",
+                "1b21",
+                "1142"
+            ],
+            "pci_revision": 1
+        },
+        "name": "XH00",
+        "ports": [
+            {
+                "class": 3,
+                "comment": null,
+                "devices": [],
+                "guessed": 3,
+                "index": 1,
+                "location_id": 17825792,
+                "name": "SS01",
+                "selected": false,
+                "selection_index": 7,
+                "type": null
+            },
+            {
+                "class": 3,
+                "comment": null,
+                "devices": [],
+                "guessed": 3,
+                "index": 2,
+                "location_id": 18874368,
+                "name": "SS02",
+                "selected": false,
+                "selection_index": 8,
+                "type": null
+            },
+            {
+                "class": 3,
+                "comment": null,
+                "devices": [],
+                "guessed": 3,
+                "index": 3,
+                "location_id": 19922944,
+                "name": "SS03",
+                "selected": false,
+                "selection_index": 9,
+                "type": null
+            },
+            {
+                "class": 3,
+                "comment": null,
+                "devices": [
+                    {
+                        "devices": [],
+                        "location_id": 20971520,
+                        "name": "USB3.2 Hub",
+                        "port": 4,
+                        "speed": 3
+                    }
+                ],
+                "guessed": 3,
+                "index": 5,
+                "location_id": 20971520,
+                "name": "SS05",
+                "selected": true,
+                "selection_index": 10,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [],
+                "guessed": 9,
+                "index": 6,
+                "location_id": 22020096,
+                "name": "HS01",
+                "selected": false,
+                "selection_index": 11,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [],
+                "guessed": 3,
+                "index": 7,
+                "location_id": 23068672,
+                "name": "HS02",
+                "selected": false,
+                "selection_index": 12,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [
+                    {
+                        "devices": [],
+                        "location_id": 25165824,
+                        "name": "USB2.1 Hub",
+                        "port": 8,
+                        "speed": 2
+                    }
+                ],
+                "guessed": 3,
+                "index": 8,
+                "location_id": 24117248,
+                "name": "HS03",
+                "selected": true,
+                "selection_index": 13,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [
+                    {
+                        "devices": [],
+                        "location_id": 25165824,
+                        "name": "USB2.1 Hub",
+                        "port": 8,
+                        "speed": 2
+                    }
+                ],
+                "guessed": 3,
+                "index": 10,
+                "location_id": 25165824,
+                "name": "HS05",
+                "selected": true,
+                "selection_index": 14,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [
+                    {
+                        "devices": [],
+                        "location_id": 26214400,
+                        "name": "ITE Device",
+                        "port": 9,
+                        "speed": 1
+                    }
+                ],
+                "guessed": 3,
+                "index": 11,
+                "location_id": 26214400,
+                "name": "HS06",
+                "selected": true,
+                "selection_index": 15,
+                "type": null
+            }
+        ],
+        "selected_count": 4
+    },
+    {
+        "class": 48,
+        "identifiers": {
+            "acpi_path": "\\_SB.PCI0.GPP7.UP00.DP40.UP00.DP60.XH00",
+            "bdf": [
+                18,
+                0,
+                0
+            ],
+            "location_id": 33554432,
+            "path": "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/GPP7@2,1/IOPP/UP00@0/IOPP/DP40@8/IOPP/UP00@0/IOPP/DP60@C/IOPP/XH00@0/XH00@02000000",
+            "pci_id": [
+                "1022",
+                "43f7",
+                "1b21",
+                "1142"
+            ],
+            "pci_revision": 1
+        },
+        "name": "XH00",
+        "ports": [
+            {
+                "class": 3,
+                "comment": null,
+                "devices": [
+                    {
+                        "devices": [],
+                        "location_id": 34603008,
+                        "name": "DataTraveler 80",
+                        "port": 1,
+                        "speed": 3
+                    }
+                ],
+                "guessed": null,
+                "index": 1,
+                "location_id": 34603008,
+                "name": "AppleUSB30XHCIPort",
+                "selected": true,
+                "selection_index": 16,
+                "type": null
+            },
+            {
+                "class": 3,
+                "comment": null,
+                "devices": [],
+                "guessed": null,
+                "index": 2,
+                "location_id": 35651584,
+                "name": "AppleUSB30XHCIPort",
+                "selected": false,
+                "selection_index": 17,
+                "type": null
+            },
+            {
+                "class": 3,
+                "comment": null,
+                "devices": [],
+                "guessed": null,
+                "index": 3,
+                "location_id": 36700160,
+                "name": "AppleUSB30XHCIPort",
+                "selected": false,
+                "selection_index": 18,
+                "type": null
+            },
+            {
+                "class": 3,
+                "comment": null,
+                "devices": [],
+                "guessed": null,
+                "index": 4,
+                "location_id": 37748736,
+                "name": "AppleUSB30XHCIPort",
+                "selected": false,
+                "selection_index": 19,
+                "type": null
+            },
+            {
+                "class": 3,
+                "comment": null,
+                "devices": [],
+                "guessed": null,
+                "index": 5,
+                "location_id": 38797312,
+                "name": "AppleUSB30XHCIPort",
+                "selected": false,
+                "selection_index": 20,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [],
+                "guessed": null,
+                "index": 6,
+                "location_id": 39845888,
+                "name": "AppleUSB20XHCIPort",
+                "selected": false,
+                "selection_index": 21,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [],
+                "guessed": null,
+                "index": 7,
+                "location_id": 40894464,
+                "name": "AppleUSB20XHCIPort",
+                "selected": false,
+                "selection_index": 22,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [],
+                "guessed": null,
+                "index": 8,
+                "location_id": 41943040,
+                "name": "AppleUSB20XHCIPort",
+                "selected": false,
+                "selection_index": 23,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [],
+                "guessed": null,
+                "index": 9,
+                "location_id": 42991616,
+                "name": "AppleUSB20XHCIPort",
+                "selected": false,
+                "selection_index": 24,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [],
+                "guessed": null,
+                "index": 10,
+                "location_id": 44040192,
+                "name": "AppleUSB20XHCIPort",
+                "selected": false,
+                "selection_index": 25,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [],
+                "guessed": null,
+                "index": 11,
+                "location_id": 45088768,
+                "name": "AppleUSB20XHCIPort",
+                "selected": false,
+                "selection_index": 26,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [],
+                "guessed": null,
+                "index": 12,
+                "location_id": 46137344,
+                "name": "AppleUSB20XHCIPort",
+                "selected": false,
+                "selection_index": 27,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [],
+                "guessed": null,
+                "index": 13,
+                "location_id": 47185920,
+                "name": "AppleUSB20XHCIPort",
+                "selected": false,
+                "selection_index": 28,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [
+                    {
+                        "devices": [],
+                        "location_id": 48234496,
+                        "name": "IOUSBHostDevice",
+                        "port": 14,
+                        "speed": 1
+                    }
+                ],
+                "guessed": null,
+                "index": 14,
+                "location_id": 48234496,
+                "name": "AppleUSB20XHCIPort",
+                "selected": true,
+                "selection_index": 29,
+                "type": null
+            },
+            {
+                "class": 2,
+                "comment": null,
+                "devices": [],
+                "guessed": null,
+                "index": 15,
+                "location_id": 49283072,
+                "name": "AppleUSB20XHCIPort",
+                "selected": false,
+                "selection_index": 30,
+                "type": null
+            }
+        ],
+        "selected_count": 2
+    }
+]

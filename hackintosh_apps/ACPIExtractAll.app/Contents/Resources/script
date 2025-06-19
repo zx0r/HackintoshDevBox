@@ -1,0 +1,22 @@
+#!/bin/sh
+
+outDir=/tmp/ACPI
+pledit=./PlistBuddy
+
+rm -rf $outDir
+mkdir $outDir
+
+echo "Extracting..."
+mkdir $outDir/ACPI
+./patchmatic -extract $outDir/ACPI
+
+echo "Creating Zip..."
+cd $outDir
+zip -r ~/Desktop/"ACPI $hostName.zip" * > /dev/null
+rm -rf $outDir
+
+echo "Extracting bootlog..."
+log show --last boot | head -1500 > ~/Desktop/bootlog.txt
+log show --predicate "processID == 0" --start $(date "+%Y-%m-%d") --debug > ~/Desktop/kernel.log
+
+echo "Done!!! Files generated on Desktop"

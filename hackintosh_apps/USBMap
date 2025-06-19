@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#set -x
+
+clear
+
+echo "            "
+echo "##### !!! DOWNLOADING FILES !!! #####"
+echo "            "
+mkdir /$HOME/Desktop/Lilu4All
+cd /$HOME/Desktop/Lilu4All
+git clone https://github.com/corpnewt/USBMap
+cd USBMap
+chmod +x USBMap.command
+./USBMap.command

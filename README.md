@@ -144,8 +144,8 @@
 
 ##### ⚙️ Notes
 
-- OpenCore Config validated with [OCValidator](https://github.com/corpnewt/OCValidate)
-- All SSDTs compiled using [iasl](https://github.com/acidanthera/MaciASL)
+- [CorpNewt](https://github.com/corpnewt)
+- [MaciASL](https://github.com/acidanthera/MaciASL) ACPI editing IDE for macOS
 - USB mapping via `USBToolBox.kext` + `UTBMap.kext`
 - NVRAM, RTC, and UEFI entries cleaned with `CleanNvram.efi` if needed
 - SMBIOS: MacPro7,1 for full GPU acceleration (AGPM functional)

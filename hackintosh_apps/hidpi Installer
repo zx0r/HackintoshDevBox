@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#set -x
+
+echo "            "
+echo "##### !!! DOWNLOADING FILES !!! #####"
+echo "            "
+cd /$HOME/Desktop/
+git clone https://github.com/xzhih/one-key-hidpi/
+cd /$HOME/Desktop/one-key-hidpi
+./hidpi.command

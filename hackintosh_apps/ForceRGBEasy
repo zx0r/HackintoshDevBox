@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#set -x
+
+clear
+
+echo "            "
+echo "##### !!! DOWNLOADING FILES !!! #####"
+echo "            "
+mkdir /$HOME/Desktop/Olarila/
+cd /$HOME/Desktop/Olarila/
+git clone https://github.com/corpnewt/ForceRGB
+cd /$HOME/Desktop/Olarila/ForceRGB
+./ForceRGB.command

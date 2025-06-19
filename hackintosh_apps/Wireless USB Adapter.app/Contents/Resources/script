@@ -1,0 +1,11 @@
+#!/bin/sh
+# By chris1111
+#
+# Version "1.0" by chris1111
+# Vars
+apptitle="Wireless USB Adapter"
+version="1.0"
+# Set Icon directory and file 
+export ICNS=$(dirname "${0}")
+iconfile="$ICNS/AppIcon.icns"
+./WirelessUSBAdapter
