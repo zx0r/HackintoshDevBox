@@ -1,4 +1,0 @@
-Executing: /usr/bin/kmutil showloaded
-No variant specified, falling back to release
-  156    0 0xffffff7f9526c000 0x1000     0x1000     com.apple.driver.AppleSMBusPCI (1.0.14d1) 39845D9A-A618-31ED-98F9-5F906ACDCD75 <18 7 6 3>
-  179    1 0xffffff7f95260000 0x6ffd     0x6ffd     com.apple.driver.AppleSMBusController (1.0.18d1) B7BB13CF-C689-38C1-97A8-44BC649CBFAB <178 18 17 7 6 3>
