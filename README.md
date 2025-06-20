@@ -144,10 +144,16 @@
 
 ##### ⚙️ Notes
 
-- [CorpNewt](https://github.com/corpnewt)
+- [Hackintool](https://github.com/headkaze/Hackintool)
+- [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools)
+- [Plistedit-Pro](https://www.fatcatsoftware.com/plisteditpro/)
+- [AMDVanillaPatches](https://github.com/corpnewt/AMDVanillaPatches)
+- [SSDTTime](https://github.com/corpnewt/SSDTTime)
+- [USBMap](https://github.com/corpnewt/USBMap)
+- [GenSMBios](https://github.com/corpnewt/GenSMBIOS)
+- [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
 - [MaciASL](https://github.com/acidanthera/MaciASL) ACPI editing IDE for macOS
-- USB mapping via `USBToolBox.kext` + `UTBMap.kext`
-- NVRAM, RTC, and UEFI entries cleaned with `CleanNvram.efi` if needed
+- [OpCore-Simplify](https://github.com/lzhoang2801/OpCore-Simplify)
 - SMBIOS: MacPro7,1 for full GPU acceleration (AGPM functional)
 
 ---

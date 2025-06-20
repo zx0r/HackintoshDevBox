@@ -1,0 +1,3 @@
+kextcache -i /
+Executing: /usr/bin/kmutil install --volume-root /
+kmutil rebuild done

@@ -1,0 +1,173 @@
+
+━━━━━━━━━━━━━━━━━ General Info ━━━━━━━━━━━━━━━━━
+Generated on: Fri Jun 20 10:07:53 BST 2025
+User: zx0r
+Board Model: Mac Pro
+Board Model Identifier: MacPro7,1
+OS Loader Version: 580.140.1~51
+System Firmware Version: 2069.0.0.0.0
+Bootloader: OpenCore
+macOS Version: 14.7.2
+Build: 23H311
+
+━━━━━━━━━ Hardware Information Summary ━━━━━━━━━
+CPU: AMD Ryzen 9 7900X 12-Core Processor            
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GPU: AMD Radeon RX 6900 XT 16GB
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Storage info: Capacity: 1 TB (1,000,204,886,016 bytes)
+Model: Samsung SSD 990 PRO 1TB
+Serial Number: S6Z1NJ0W240554V
+Link Speed: 16.0 GT/s
+Capacity: 838.9 MB (838,860,800 bytes)
+Capacity: 1 TB (1,000,204,886,016 bytes)
+Model: KINGSTON SFYRS1000G
+Serial Number: 50026B7685DD01D1
+Link Speed: 16.0 GT/s
+Capacity: 104.9 MB (104,857,600 bytes)
+Capacity: 16.8 MB (16,777,216 bytes)
+Capacity: 370.21 GB (370,207,096,832 bytes)
+Capacity: 673.2 MB (673,185,792 bytes)
+Capacity: 209.72 GB (209,715,200,000 bytes)
+Capacity: 419.49 GB (419,486,699,520 bytes)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory: P0 CHANNEL A/DIMM 0:
+Size: Empty
+Type: Empty
+Speed: Empty
+Manufacturer: Empty
+Part Number: Empty
+P0 CHANNEL A/DIMM 1:
+Size: 24 GB
+Type: RAM
+Speed: 6400 MHz
+Manufacturer: G.SKILL
+Part Number: F5-6400J4048F24G
+P0 CHANNEL B/DIMM 0:
+Size: Empty
+Type: Empty
+Speed: Empty
+Manufacturer: Empty
+Part Number: Empty
+P0 CHANNEL B/DIMM 1:
+Size: 24 GB
+Type: RAM
+Speed: 6400 MHz
+Manufacturer: G.SKILL
+Part Number: F5-6400J4048F24G
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Type: Ethernet
+Hardware: Ethernet
+BSD Device Name: en0
+IPv4 Addresses: 192.168.1.64
+IPv4:
+Additional Routes:
+Destination Address: 192.168.1.64
+Subnet Mask: 255.255.255.255
+Destination Address: 169.254.0.0
+Subnet Mask: 255.255.0.0
+Addresses: 192.168.1.64
+ARP Resolved Hardware Address: e0:0e:e4:c3:a4:68
+ARP Resolved IP Address: 192.168.1.254
+Configuration Method: DHCP
+Confirmed Interface Name: en0
+Interface Name: en0
+Network Signature: IPv4.Router=192.168.1.254;IPv4.RouterHardwareAddress=e0:0e:e4:c3:a4:68
+Router: 192.168.1.254
+Subnet Masks: 255.255.255.0
+IPv6:
+Configuration Method: Automatic
+DNS:
+Server Addresses: 192.168.1.254
+DHCP Server Responses:
+Domain Name Servers: 192.168.1.254
+Lease Duration (seconds): 0
+DHCP Message Type: 0x05
+Routers: 192.168.1.254
+Server Identifier: 192.168.1.254
+Subnet Mask: 255.255.255.0
+MAC Address: 74:56:3c:48:eb:d0
+Media Options: Full Duplex, Flow Control
+Media Subtype: 1000baseT
+Proxies:
+Exceptions List: localhost, 127.0.0.0/8, ::1
+FTP Passive Mode: Yes
+HTTP Proxy Enabled: No
+HTTP Proxy Port: 10808
+HTTP Proxy Server: 127.0.0.1
+HTTPS Proxy Enabled: No
+HTTPS Proxy Port: 10808
+HTTPS Proxy Server: 127.0.0.1
+SOCKS Proxy Enabled: No
+SOCKS Proxy Port: 10808
+SOCKS Proxy Server: 127.0.0.1
+Service Order: 0
+
+Wi-Fi:
+
+Type: AirPort
+Hardware: AirPort
+BSD Device Name: en1
+IPv4 Addresses: 192.168.1.66
+IPv4:
+Additional Routes:
+Destination Address: 192.168.1.66
+Subnet Mask: 255.255.255.255
+Destination Address: 169.254.0.0
+Subnet Mask: 255.255.0.0
+Addresses: 192.168.1.66
+ARP Resolved Hardware Address: e0:0e:e4:c3:a4:68
+ARP Resolved IP Address: 192.168.1.254
+Configuration Method: DHCP
+Confirmed Interface Name: en1
+Interface Name: en1
+Network Signature: IPv4.Router=192.168.1.254;IPv4.RouterHardwareAddress=e0:0e:e4:c3:a4:68
+Router: 192.168.1.254
+Subnet Masks: 255.255.255.0
+IPv6:
+Configuration Method: Automatic
+DNS:
+Server Addresses: 192.168.1.254
+DHCP Server Responses:
+Domain Name Servers: 192.168.1.254
+Lease Duration (seconds): 0
+DHCP Message Type: 0x05
+Routers: 192.168.1.254
+Server Identifier: 192.168.1.254
+Subnet Mask: 255.255.255.0
+MAC Address: f4:c8:8a:d0:6d:49
+Media Options: 
+Media Subtype: Auto Select
+Proxies:
+Exceptions List: localhost, 127.0.0.0/8, ::1
+FTP Passive Mode: Yes
+HTTP Proxy Enabled: No
+HTTP Proxy Port: 10808
+HTTP Proxy Server: 127.0.0.1
+HTTPS Proxy Enabled: No
+HTTPS Proxy Port: 10808
+HTTPS Proxy Server: 127.0.0.1
+SOCKS Proxy Enabled: No
+SOCKS Proxy Port: 10808
+SOCKS Proxy Server: 127.0.0.1
+Service Order: 1
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+system_profiler
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+system_profiler
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+system_profiler
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+system_profiler
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

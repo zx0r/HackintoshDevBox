@@ -1,0 +1,60 @@
+2025-06-13 12:54:16 +0100 Sleep               	Entering Sleep state due to 'Idle Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 6955 secs 
+2025-06-13 14:50:11 +0100 Wake                	Wake from Normal Sleep [CDNVA] : due to XHC2/HID Activity Using AC (Charge:0%) 8972 secs 
+2025-06-13 17:19:43 +0100 Sleep               	Entering Sleep state due to 'Idle Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 1420 secs 
+2025-06-13 17:43:23 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-13 17:44:08 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 6775 secs 
+2025-06-13 19:37:03 +0100 Wake                	Wake from Normal Sleep [CDNVA] : due to XHC2/HID Activity Using AC (Charge:0%)           
+2025-06-15 09:21:00 +0100 Sleep               	Entering Sleep state due to 'Idle Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 2641 secs 
+2025-06-15 10:05:01 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to XHC2/ Using AC (Charge:0%) 3 secs    
+2025-06-15 10:05:04 +0100 Wake                	DarkWake to FullWake from Normal Sleep [CDNVA] : due to HID Activity Using AC (Charge:0%) 5739 secs 
+2025-06-15 11:40:43 +0100 Sleep               	Entering Sleep state due to 'Idle Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 15274 secs
+2025-06-15 15:55:17 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-15 15:56:02 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 29538 secs
+2025-06-16 00:08:20 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-16 00:09:05 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 26558 secs
+2025-06-16 07:31:43 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-16 07:32:28 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 2935 secs 
+2025-06-16 08:21:23 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-16 08:22:08 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 11863 secs
+2025-06-16 11:39:51 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-16 11:40:36 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 17632 secs
+2025-06-16 16:34:28 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-16 16:35:13 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 5983 secs 
+2025-06-16 18:14:56 +0100 Wake                	Wake from Normal Sleep [CDNVA] : due to XHC2/HID Activity Using AC (Charge:0%) 4683 secs 
+2025-06-16 19:32:59 +0100 Sleep               	Entering Sleep state due to 'Idle Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 250 secs  
+2025-06-16 19:37:09 +0100 Wake                	Wake from Normal Sleep [CDNVA] : due to XHC2/HID Activity Using AC (Charge:0%)           
+2025-06-17 05:43:00 +0100 Sleep               	Entering Sleep state due to 'Idle Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 14269 secs
+2025-06-17 09:40:49 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to XHC2/ Using AC (Charge:0%) 2 secs    
+2025-06-17 09:40:51 +0100 Wake                	DarkWake to FullWake from Normal Sleep [CDNVA] : due to HID Activity Using AC (Charge:0%) 3238 secs 
+2025-06-17 10:34:49 +0100 Sleep               	Entering Sleep state due to 'Idle Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 11496 secs
+2025-06-17 13:46:25 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-17 13:47:10 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 20722 secs
+2025-06-17 19:32:32 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-17 19:33:17 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 8771 secs 
+2025-06-17 21:59:28 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-17 22:00:13 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 29538 secs
+2025-06-18 06:12:31 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-18 06:13:16 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%)           
+2025-06-18 11:52:19 +0100 Sleep               	Entering Sleep state due to 'Idle Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 9197 secs 
+2025-06-18 14:25:36 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-18 14:26:21 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 19891 secs
+2025-06-18 19:57:52 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0 GPP2 EP00/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-18 19:58:37 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 29538 secs
+2025-06-19 04:10:55 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-19 04:11:40 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 21804 secs
+2025-06-19 10:15:04 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to XHC2/ Using AC (Charge:0%) 4 secs    
+2025-06-19 10:15:08 +0100 Wake                	DarkWake to FullWake from Normal Sleep [CDNVA] : due to HID Activity Using AC (Charge:0%)           
+2025-06-19 12:17:49 +0100 Sleep               	Entering Sleep state due to 'Idle Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 369 secs  
+2025-06-19 12:23:58 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-19 12:24:43 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 2210 secs 
+2025-06-19 13:01:33 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to XHC2/ Using AC (Charge:0%) 9 secs    
+2025-06-19 13:01:42 +0100 Wake                	DarkWake to FullWake from Normal Sleep [CDNVA] : due to HID Activity Using AC (Charge:0%)           
+2025-06-19 14:05:31 +0100 Sleep               	Entering Sleep state due to 'Idle Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 15153 secs
+2025-06-19 18:18:04 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to XHC2/ Using AC (Charge:0%) 45 secs   
+2025-06-19 18:18:49 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 8292 secs 
+2025-06-19 20:37:01 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to RTC0 GPP2 EP00/Maintenance Using AC (Charge:0%) 45 secs   
+2025-06-19 20:37:46 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 34 secs   
+2025-06-19 20:38:20 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to GPP2 EP00/ Using AC (Charge:0%) 45 secs   
+2025-06-19 20:39:05 +0100 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=inactive Using AC (Charge:0%) 7188 secs 
+2025-06-19 22:38:53 +0100 DarkWake            	DarkWake from Normal Sleep [CDN] : due to XHC2/ Using AC (Charge:0%) 6 secs    
+2025-06-19 22:38:59 +0100 Wake                	DarkWake to FullWake from Normal Sleep [CDNVA] : due to HID Activity Using AC (Charge:0%)           

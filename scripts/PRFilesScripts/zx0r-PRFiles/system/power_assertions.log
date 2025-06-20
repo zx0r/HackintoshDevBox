@@ -1,0 +1,26 @@
+2025-06-20 10:07:47 +0100 
+Assertion status system-wide:
+   BackgroundTask                 0
+   ApplePushServiceTask           0
+   UserIsActive                   1
+   PreventUserIdleDisplaySleep    0
+   PreventSystemSleep             0
+   ExternalMedia                  1
+   PreventUserIdleSystemSleep     0
+   NetworkClientActive            0
+Listed by owning process:
+   pid 105(powerd): [0x0000000800088033] 07:02:33 ExternalMedia named: "com.apple.powermanagement.externalmediamounted"  
+   pid 161(WindowServer): [0x0000000e0009811e] 00:00:00 UserIsActive named: "com.apple.iohideventsystem.queue.tickle serviceID:100000628 service:AppleUserHIDEventService product:Gaming Keyboard eventType:3"  
+	Timeout will fire in 300 secs Action=TimeoutActionRelease
+Kernel Assertions: 0x4=USB
+   id=500  level=255 0x4=USB creat=20/06/2025, 03:08 description=com.apple.usb.externaldevice.00100000 owner=USB2.0 Hub
+   id=503  level=255 0x4=USB creat=20/06/2025, 03:10 description=com.apple.usb.externaldevice.01b00000 owner=ITE Device
+   id=504  level=255 0x4=USB creat=20/06/2025, 03:10 description=com.apple.usb.externaldevice.02100000 owner=DataTraveler 80
+   id=505  level=255 0x4=USB creat=20/06/2025, 03:11 description=com.apple.usb.externaldevice.01a00000 owner=USB2.1 Hub
+   id=507  level=255 0x4=USB creat=20/06/2025, 03:12 description=com.apple.usb.externaldevice.01500000 owner=USB3.2 Hub
+   id=509  level=255 0x4=USB creat=20/06/2025, 03:13 description=com.apple.usb.externaldevice.00120000 owner=USB 2.0 Hub
+   id=511  level=255 0x4=USB creat=20/06/2025, 03:13 description=com.apple.usb.externaldevice.00140000 owner=2.4G Wireless Receiver
+   id=512  level=255 0x4=USB creat=20/06/2025, 03:15 description=com.apple.usb.externaldevice.02700000 owner=2.4G Wireless Receiver
+   id=513  level=255 0x4=USB creat=20/06/2025, 03:17 description=com.apple.usb.externaldevice.00123000 owner=Gaming Keyboard
+   id=514  level=255 0x4=USB creat=20/06/2025, 03:18 description=com.apple.usb.externaldevice.02e00000 owner=Bluetooth USB Host Controller
+Idle sleep preventers: IODisplayWrangler
